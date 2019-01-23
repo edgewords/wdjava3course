@@ -15,6 +15,9 @@ import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import poms.homePage;
 
@@ -23,7 +26,12 @@ public class QuickTest {
 
 	String username;
 	String password;
-	WebDriver driver = new ChromeDriver();	
+	WebDriver driver = new ChromeDriver();
+
+	//FirefoxOptions options = new FirefoxOptions().setHeadless(true);
+	//WebDriver driver = new FirefoxDriver(options);	
+	
+	//driver = new InternetExplorerDriver();
 	
 	public QuickTest (String username, String password) {
 		this.username = username;
@@ -39,7 +47,7 @@ public class QuickTest {
 	}
 	
 	@Test
-	public void test() throws InterruptedException {
+	public void test() throws InterruptedException {		
 		homePage _homePage = new homePage(driver);
 		_homePage.clickLogin();
 		
@@ -54,7 +62,8 @@ public class QuickTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		driver = new ChromeDriver(); //instantiate a browser
+		
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.edgewordstraining.co.uk/webdriver2");
 	}

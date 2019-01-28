@@ -14,48 +14,48 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-	
+
 	<organization>
-    <name>Edgewords.com</name>
-    <url>https://www.edgewordstraining.co.uk</url>
-  </organization>
-	
+		<name>Edgewords.com</name>
+		<url>https://www.edgewordstraining.co.uk</url>
+	</organization>
+
 	<developers>
-      <developer>
-         <name>Tom Millichamp</name>
-         <email>tom@edgewords.co.uk</email>
-         <roles>
-            <role>Architect</role>
-         </roles>
-         <organization>Edgewords.com</organization>
-         <timezone>0</timezone>
-       </developer>         
-   </developers>
-   
-   <contributors>
-    <contributor>
-      <name>Steve Powell</name>
-      <email>steve.powell@edgewordstraining.co.uk</email>
-      <organization>Edgewords.com</organization>
-      <roles>
-        <role>tester</role>
-      </roles>
-      <timezone>0</timezone>
-    </contributor>
-  </contributors>
-   
-   <scm>
-	   	<url>https://github.com/edgewords/wdjava3course</url>
-	   	<connection>scm:git:git://github.com/edgewords/wdjava3course.git</connection>
+		<developer>
+			<name>Tom Millichamp</name>
+			<email>tom@edgewords.co.uk</email>
+			<roles>
+				<role>Architect</role>
+			</roles>
+			<organization>Edgewords.com</organization>
+			<timezone>0</timezone>
+		</developer>
+	</developers>
+
+	<contributors>
+		<contributor>
+			<name>Steve Powell</name>
+			<email>steve.powell@edgewordstraining.co.uk</email>
+			<organization>Edgewords.com</organization>
+			<roles>
+				<role>tester</role>
+			</roles>
+			<timezone>0</timezone>
+		</contributor>
+	</contributors>
+
+	<scm>
+		<url>https://github.com/edgewords/wdjava3course</url>
+		<connection>scm:git:git://github.com/edgewords/wdjava3course.git</connection>
 		<developerConnection>scm:git:git@github.com:edgewords/wdjava3course.git</developerConnection>
-   </scm>
-   
-   <issueManagement>
-	   <url>https://github.com/edgewords/wdjava3course/issues</url>
-	   <system>GitHub Issues</system>
-   </issueManagement>
-   
-   <licenses>
+	</scm>
+
+	<issueManagement>
+		<url>https://github.com/edgewords/wdjava3course/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+
+	<licenses>
 		<license>
 			<name>MIT License</name>
 			<url>http://www.opensource.org/licenses/mit-license.php</url>
@@ -71,7 +71,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -79,11 +78,10 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
-	<defaultGoal>test</defaultGoal>
+		<defaultGoal>test</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -98,7 +96,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
@@ -112,6 +109,7 @@
 					<outputName>my-report</outputName>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>

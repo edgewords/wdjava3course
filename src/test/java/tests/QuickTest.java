@@ -26,14 +26,8 @@ public class QuickTest {
 
 	String username;
 	String password;
-	
-	
-	WebDriver driver = new ChromeDriver();
-
-	//FirefoxOptions options = new FirefoxOptions().setHeadless(true);
-	//WebDriver driver = new FirefoxDriver(options);	
-	
-	//driver = new InternetExplorerDriver();
+		
+	WebDriver driver;
 	
 	public QuickTest (String username, String password) {
 		this.username = username;
@@ -65,6 +59,15 @@ public class QuickTest {
 	@Before
 	public void setUp() throws Exception {
 		
+		String browser = System.getProperty("browser");
+	    
+	    if (browser != null && browser.equalsIgnoreCase("firefox")) {
+	    	driver = new FirefoxDriver(); 	
+	    }
+	    else {
+	    	driver = new ChromeDriver(); //instantiate a browser
+	    }
+	    System.out.println("Browser passed through is : " + browser);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.edgewordstraining.co.uk/webdriver2");

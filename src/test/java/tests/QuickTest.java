@@ -26,6 +26,8 @@ public class QuickTest {
 
 	String username;
 	String password;
+	
+	
 	WebDriver driver = new ChromeDriver();
 
 	//FirefoxOptions options = new FirefoxOptions().setHeadless(true);
@@ -48,8 +50,8 @@ public class QuickTest {
 	
 	@Test
 	public void test() throws InterruptedException {		
-		homePage _homePage = new homePage(driver);
-		_homePage.clickLogin();
+		homePage HomePage = new homePage(driver);
+		HomePage.clickLogin();
 		
 		
 		//driver.findElement(By.partialLinkText("Login")).click();

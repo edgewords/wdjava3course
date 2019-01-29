@@ -99,6 +99,16 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M3</version>
 				<configuration>
+				<!-- To run the tests in parallel, simply uncomment the following: 
+					<parallel>all</parallel>
+					<threadCount>10</threadCount>
+					<threadCountSuites>2</threadCountSuites>
+					<threadCountClasses>2</threadCountClasses>
+					<threadCountMethods>6</threadCountMethods>
+					<parallelTestTimeoutInSeconds>3.5</parallelTestTimeoutInSeconds>
+					<parallelTestTimeoutForcedInSeconds>5</parallelTestTimeoutForcedInSeconds>
+					<perCoreThreadCount>true</perCoreThreadCount>
+				-->
 					<systemPropertyVariables>
 						<browser>${browser}</browser>
 					</systemPropertyVariables>

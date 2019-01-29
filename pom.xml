@@ -99,6 +99,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M3</version>
 				<configuration>
+					<systemPropertyVariables>
+						<browser>${browser}</browser>
+					</systemPropertyVariables>
 					<includes>
 						<include>QuickTest.java</include>
 					</includes>
@@ -117,10 +120,7 @@
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>3.0.0-M3</version>
 				<configuration>
-					<outputName>my-site-report</outputName>
-					<systemPropertyVariables>
-						<browser>${browser}</browser>
-					</systemPropertyVariables>
+					<outputName>my-site-report</outputName>					
 				</configuration>
 			</plugin>
 
